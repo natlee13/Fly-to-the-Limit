@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Fly to the Limit Scenic Flight bookings">
+	<title>Bookings</title>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/base-min.css">
+	<link rel="stylesheet" href="assets/jquery.datetimepicker.min.css">
+	<link rel="stylesheet" media="screen" href="assets/styles.css">
+	<link rel="stylesheet" media="print" href="assets/print.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+</head>
+
+<body>
+	
+	<div id = "header">
+			
+		<div id = "logo">
+		</div>
+
+		<ul id="nav">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="our_flights.html">Our Flights</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="bookings.html">Bookings</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>	
+		
+	</div>
+
+	<div id = "bookingPhoto">
+		<h1>Book Now for the <br>Experience of a Lifetime...</h1>
+	</div>
+
+	<div id="container">
+
+		<div id="bookingBackground">
+
+			<div id="formBackground">
+
+				<form id="booking" action="" method="POST">
+					<h1>Book Online Now</h1>
+					<h3>Fields marked with * are required. </h3>
+					<h2>Flight Details</h2>
+			
+					<div class="bookingFormGroup">
+						<label for="selectFlight">Select flight: *</label>
+						<select name="selectFlight" id="selectFlight">
+							<option value="1">Queenstown Experience-1 hour-$350 pp</option>
+							<option value="1">Queenstown Experience-2 hour-$700 pp</option>
+							<option value="2">Heli Adventure-1 hour-$450 pp</option>
+							<option value="2">Heli Adventure-2 hour-$900 pp</option>
+							<option value="3">Glider Tour - $3600 pp</option>
+							<option value="4">Photgraphic Flight-1 hour- $350 pp</option>
+							<option value="4">Photgraphic Flight-2 hour- $700 pp</option>
+							<option value="5">Mountains at sunset - $350 pp </option>
+							<option value="6">Aerobatics Adventure - $350 pp</option>
+							<option value="7">A day at the Lake - $1350 pp</option>
+						</select>
+					</div>
+
+					<div class="bookingFormGroup">
+						<label for="noPassengers">Number of Passengers: *</label>
+						<select name="noPassengers" id="noPassengers">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+					</div>
+
+					<div class="bookingFormGroup">
+						<label for="flightDate">Preferred flight date: *</label>
+						<input type="text" name="flightDate" id="flightDate">
+						<span id="dateValidMessage"></span>
+					</div>
+
+					<div class="bookingFormGroup">
+						<label for="flightTime">Preferred flight time: *</label>
+						<select name="flightTime" id="flightTime">
+							<option value="9.00am">9.00am</option>
+							<option value="10.00am">10.00am</option>
+							<option value="11.00am">11.00am</option>
+							<option value="1.00pm">1.00pm</option>
+							<option value="2.00pm">2.00pm</option>
+							<option value="3.00pm">3.00pm</option>
+							<option value="4.00pm">4.00pm</option>
+							<option value="sunset">sunset 5.00pm winter/8pm summer</option>
+						</select>
+					</div>
+
+					<div class="bookingFormGroup">
+						<label for="departFrom">Depart from: *</label>
+						<select name="departFrom" id="departFrom">
+							<option value="1">Queenstown</option>
+							<option value="2">Wanaka</option>
+						</select>
+					</div>
+
+					<h2>Your Details</h2>
+
+					<div class="bookingFormGroup">
+						<label for="firstName">First name: *</label>
+						<input type="text" name="firstName" id="firstName">
+						<span id="firstNameValid"></span>
+					</div>
+
+					<div class="bookingFormGroup">
+						<label for="lastName">Last name: *</label>
+						<input type="text" name="lastName" id="lastName">
+						<span id="lastNameValid"></span>
+					</div>
+		
+					<div class="bookingFormGroup">
+						<label for="bookingEmail">Email: *</label>
+						<input type="text" name="bookingEmail" id="bookingEmail">
+						<span id="emailValid"></span>
+					</div>
+		
+					<div class="bookingFormGroup">
+						<label for="contactNumber">Contact phone: *</label>
+						<input type="text" name="contactNumber" id="contactNumber">
+						<span id="contactNumberValid"></span>
+					</div>
+
+					<div class="bookingFormGroup">
+						<label for="message">Message: (optional)</label>
+						<textarea name="message" id="message" cols="30" rows="10" placeholder="Questions or comments?"></textarea>
+						<span id="messageValid"></span>
+					</div>
+
+					<div class="bookingFormGroup2" id="terms">
+						<input type="checkbox" name="tickBox" id="tickBox" class="tickBox">
+						<label for="tickBox" id="tnc">I have read and accept the <a href="" id="tcPopupControl">terms and conditions.</a>*</label>
+						<span id="tickValidMessage"></span>
+					</div>
+
+					<div id="termsPopup" class="terms hide scroll">
+						<i class="fa fa-times close-button" aria-hidden="true"></i>
+						<h1>Fly to the Limit Booking Terms and Conditions</h1>
+						<h2>1.  Prices and Booking Confirmation</h2>
+						<p>Fares are in NZ$ and include 15% GST.<br>
+						Rates are subject to change including, but not limited to, increases in or establishment of surcharges (such as fuel surcharges), taxes, government imposed fees.<br>
+						Any request to increase flight time will incur additional charges.<br>
+						Fares are valid for the dates specified and are subject to change.<br>
+						50% deposit is required at time of booking or within 24 hours to secure the reservation.  We will contact you to arrange payment.<br>
+						Balance of payment is due prior to departure.
+						</p>
+
+						<h2>2.  Cancellation and Refunds</h2>
+						<p>Fly to the Limit reserves the right to postpone/cancel any trips due to adverse weather conditions.<br>
+						The Passenger acknowledges that Fly to the Limit may need to cancel or reschedule flights or services due to landing restrictions, unsuitable weather conditions, technical problems, operational reasons, or any event beyond Fly to the Limit’s reasonable control.<br>
+						Fly to the Limit will not be liable for any consequential losses or additional costs incurred as a result of cancellation. 	<br>
+						Tickets are fully refundable in the event that Fly to the LImit cancels the service.</p>
+
+						<h2>3.  Weather</h2>
+						<p>In the event that the weather is unsuitable on the day of your scheduled booking, your flight will be cancelled and rescheduled at no cost to you.<br> When booking please provide us with suitable contact information so we can get hold of you on the day. <br>We suggest you call us on the morning of your flight if you have any doubt about the weather.</p>
+
+					</div>
+		
+					<div class="bookingFormGroupButtons">
+						<input type="submit" class="button" name="submit" value="Submit" id="submit">
+					</div>
+
+				</form>
+			
+			</div>
+
+		</div>
+		
+	</div>
+
+	<div class = "footerImage clearfix">
+	</div>
+		
+	<div id = "footer">
+		<div id="footerText">
+			<h1>Fly to the Limit</h1>
+			<h2>Queenstown & Wanaka, NZ</h2>
+			<p>0800 FLY AWAY</p>
+			<p>fttl@flytothelimit.co.nz</p>
+			<p class = "copyright">© Fly to the Limit 2016</p>
+		</div>
+			
+		<ul id = "footerNav">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="our_flights.html">Our flights</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="bookings.html">Bookings</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+
+		<div id = "smIcons">
+			<a href="http://www.facebook.com"><img src="assets/images/fb4.png" alt="Facebook"></a>
+			<a href="https://twitter.com/?lang=en"><img src="assets/images/twitter4.png" alt="Twitter"></a>
+			<a href="https://tripadvisor.com/"><img src="assets/images/tripadvisor4.png" alt="Trip Advisor"></a>
+			<a href="www.youtube.com"><img src="assets/images/youtube4.png" alt="Youtube"></a>
+		</div>
+	</div>
+
+	<div id="termsOverlay" class="hide">
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/jquery.datetimepicker.full.js"></script>
+	<script src="assets/javascript.js" type="text/javascript"></script>
+</body>
+</html>

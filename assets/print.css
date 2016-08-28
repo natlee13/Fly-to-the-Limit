@@ -1,0 +1,68 @@
+/*#nav li a{
+	text-decoration:none;
+	color: #000000;
+}*/
+
+#nav{
+	display:none;
+}
+
+#testimonial .quote{
+	margin-bottom: 0px;
+	font-size: 16px;
+}
+
+
+#testimonial .name{
+	text-align: right;
+	margin-bottom: 50px;
+	margin-top: 0px;
+	font-size: 12px;
+}
+
+#footer{
+	display:none;
+}
+
+
+/*.......................................end of index.html............................*/
+
+/*.......................................start of our flights.............................*/
+
+.pane a{
+	text-decoration: none;
+	color: #000000;
+}
+
+/*...........................................end of our flights.................................
+............................................start of about....................................*/
+
+.pilot a, .planes a{
+	text-decoration: none;
+	color:black;
+}
+
+.popUp{
+	display:none;
+}
+
+/*..............................................end of about..................................*/
+/*.............................................start of bookings.............................*/
+
+#tnc a{
+	text-decoration: none;
+	color: #000000;
+}
+
+#submit{
+	display:none;
+}
+
+/*..............................................contact..........................................*/
+#contactSubmit{
+	display:none;
+}
+
+#contactForm{
+	display:none;
+}
